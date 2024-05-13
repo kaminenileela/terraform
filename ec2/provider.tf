@@ -7,7 +7,7 @@ terraform {
   }
 }
 
-#provide authentication here
+#providing authentication here
 provider "aws" {
-  
+  region  = "us-east-1"
 }
