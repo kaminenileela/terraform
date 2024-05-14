@@ -4,24 +4,13 @@ resource "aws_instance" "db" {
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]
     instance_type = "t2.micro"
     #subnet_id = "subnet-0a9a88898702ee98c"
-    
+
 
     tags = {
     Name = "db"
   }
 
 }
-
-resource "aws_subnet" "main" {
-  vpc_id     = "vpc-0971f8bbabacf2a48"
-  cidr_block = "172.31.16.0/20"
-
-  tags = {
-    Name = "my-subnet-02"
-  }
-}
-
-
 #resource <resource -type> <resource-name>
 resource "aws_security_group" "allow_ssh" {
     name = "allow_ssh"
