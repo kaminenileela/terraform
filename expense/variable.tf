@@ -44,11 +44,6 @@ variable "ssh_protocol" {
     default = "tcp"
 }
 
-variable "ssh_protocol" {
-    type = string
-    default = "tcp"
-}
-
 
 variable "cidr_blocks" {
     type = list
